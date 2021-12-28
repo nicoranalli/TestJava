@@ -4,6 +4,7 @@
  */
 package clases;
 
+
 /**
  *
  * @author Nicolás
@@ -12,14 +13,18 @@ public class Persona {
     String nombre;
     String apellido;
     
+    public Persona(String nom, String ap){
+        nombre = nom;
+        apellido = ap;
+    }
+
     public void mostrarPersona(){
-        System.out.println("Nombre: " + this.nombre + " Apellido: " + this.apellido);
+        System.out.println(this.nombre + " " + this.apellido);
     }
     public static void main(String[] args) {
-        Persona persona1 = new Persona();
-        persona1.nombre = "Nicolás";
-        persona1.apellido = "Ranalli";
-        
+        Persona persona1 = new Persona("Nicolás", "Ranalli");
         persona1.mostrarPersona();
+        
+        
     }
 }
